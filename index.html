@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Film</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/518be63f39.js" crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div onclick="changTheme()" class="mode-selector-container">
+                <i id="dark" class="fa-solid fa-moon"></i>
+                <i id="bright" class="hidden fa-regular fa-sun"></i>
+            </div>
+            <h1>Find your film</h1>
+            <a href="./watchlist.html">My Watchlist</a>
+            <form class="form">
+                <input id="search-field" type="text" placeholder="Search for a movie">
+                <button id="search-btn">Search</button>
+            </form>
+        </nav>
+    </header>
+    <main id="movie-list">
+        <div class="start-exploring">
+            <img src="./images/Icon.png" alt="movie icon">
+            <p>Start exploring</p>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>

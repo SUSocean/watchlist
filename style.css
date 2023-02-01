@@ -1,0 +1,276 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1C1C1C;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(./images/header.png);
+    width: 550px;
+    height: 208px;
+    color: white;
+}
+
+.container {
+    width: 466px;
+    margin: 0 auto;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.container form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translatey(19px);
+    display: flex;
+    z-index: 1;
+}
+
+form input,
+form input:focus,
+form input:active {
+    width: 342px;
+    height: 38px;
+    border-radius: 5px 0 0 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-right: none;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+form button {
+    border-radius: 0 5px 5px 0;
+    width: 120px;
+    font-weight: bold;
+    color: #374151;
+    cursor: pointer;
+    border: 1px solid grey;
+}
+
+.mode-selector-container {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+main {
+    background: white;
+    width: 550px;
+}
+
+.start-exploring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    color: #DFDDDD;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.start-exploring p {
+    margin: .5rem;
+}
+
+.movie-card {
+    margin-top: 20px;
+    width: 462px;
+    height: 147px;
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.movie-card:first-child {
+    margin-top: 3rem
+}
+
+.image-container {
+    width: 100px;
+    height: 147px;
+}
+
+.image-container img {
+    width: 100px;
+    height: 147px;
+    object-fit: cover;
+}
+
+.description-container {
+    height: 147px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.movie-title-score {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie-title-score h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 9px;
+}
+
+.score i {
+    color: #FEC654;
+    font-size: 8px;
+}
+
+.movie-info-container {
+    display: flex;
+    gap: 20px;
+    font-size: 10px;
+}
+
+.add-to-whatchlist-btn {
+    background: none;
+    border: none;
+}
+
+.add-to-whatchlist-btn::before,
+.your-whatchlist a::before {
+    content: '+';
+    margin-right: 5px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    padding: .5px 4px;
+    border-radius: 50%;
+}
+
+.add-to-whatchlist-btn:hover {
+    font-weight: bold;
+}
+
+.added.add-to-whatchlist-btn::before {
+    content: '-';
+    padding: 0 5px;
+}
+
+.plot p {
+    margin: 0;
+    font-size: 15px;
+    color: #6B7280;
+}
+
+.container a:hover {
+    color: #DFDDDD;
+}
+
+/* whatchlistHTML */
+
+.your-whatchlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    color: #DFDDDD;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.your-whatchlist a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* mode selector */
+
+
+.mode-selector-container i {
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+.darken#search-field {
+    background: #A5A5A5;
+    color: #6B7280;
+}
+
+.darken#search-field::placeholder {
+    color: #6B7280;
+}
+
+.darken#search-btn {
+    background: #4B4B4B;
+    color: white;
+}
+
+.darken#movie-list,
+.darken#selected-movie-list {
+    background: #121212;
+    color: white;
+}
+
+.darken#movie-list .movie-card,
+.darken#selected-movie-list .movie-card {
+    color: white;
+    border-bottom: 2px solid #2C2C2C;
+}
+
+.darken#movie-list .description-container .plot p,
+.darken#selected-movie-list .description-container .plot p {
+    color: #A5A5A5;
+}
+
+.darken#movie-list .description-container .movie-info-container button,
+.darken#selected-movie-list .description-container .movie-info-container button {
+    color: white;
+}
+
+.darken#movie-list .description-container .movie-info-container button::before,
+.darken#selected-movie-list .description-container .movie-info-container button::before {
+    background: white;
+    color: black;
+}
