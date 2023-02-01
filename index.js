@@ -27,7 +27,9 @@ function getMovies(input) {
 
 document.addEventListener('submit', function (e) {
     e.preventDefault()
-    getMovies(searchField.value)
+    if (searchField.value) {
+        getMovies(searchField.value)
+    }
 })
 
 // adding/removing movie to the selectedMovies[] and render
