@@ -7,12 +7,12 @@ let selectedMovies = []
 // takes input value and get ips respons then uses html template maker to update the dom
 
 function getMovies(input) {
-    fetch(`http://www.omdbapi.com/?apikey=59cfe4a9&s=${input}`)
+    fetch(`https://www.omdbapi.com/?apikey=59cfe4a9&s=${input}`)
         .then(res => res.json())
         .then(data => {
             let moviesHTML = ``
             data.Search.forEach(movie => {
-                fetch(`http://www.omdbapi.com/?apikey=59cfe4a9&i=${movie.imdbID}`)
+                fetch(`https://www.omdbapi.com/?apikey=59cfe4a9&i=${movie.imdbID}`)
                     .then(res => res.json())
                     .then(data => {
                         searchedArray.push(data)
