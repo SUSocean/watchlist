@@ -86,11 +86,11 @@ function getMoviesHTML(data, added) {
                                     <div class='description-container'>
                                         <div class='movie-title-score'><h4>${data.Title}</h4><span class='score'><i class="fa-solid fa-star"></i> ${data.imdbRating}</span></div>
                                         <div class='movie-info-container'>
-                                            <span>${data.Runtime}</span>
+                                            <span class='run-time'>${data.Runtime}</span>
                                             <span>${data.Genre}</span>
                                             <button data-id='${data.imdbID}' id='${data.imdbID}' class='${added} add-to-whatchlist-btn'>Watchlist</button>
                                         </div>
-                                        <div class='plot'><p>${data.Plot}</p></div>
+                                        <div class='plot'><p id='plot-text'>${data.Plot}</p></div>
                                     </div>
                             </div>
                             `
