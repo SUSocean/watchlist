@@ -344,3 +344,12 @@ main {
     background: white;
     color: black;
 }
+
+#letsAddMovie.darken {
+    color: white;
+}
+
+#letsAddMovie.darken::before {
+    background: white;
+    color: black;
+}

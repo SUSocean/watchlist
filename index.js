@@ -58,7 +58,7 @@ function render() {
         selectedMovieList.innerHTML = `
         <div class="your-whatchlist content">
             <p class="em">Your watchlist is looking a litle empty</p>
-            <a href="./index.html">Lets add some movies!</a>
+            <a id='letsAddMovie' href="./index.html">Lets add some movies!</a>
         </div>
         `
     } else {
@@ -111,4 +111,5 @@ function changThemeW() {
     document.getElementById('bright').classList.toggle('hidden')
     document.getElementById('dark').classList.toggle('hidden')
     selectedMovieList.classList.toggle('darken')
+    document.getElementById('letsAddMovie').classList.toggle('darken')
 }
